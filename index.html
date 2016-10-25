@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pomodoro Clock</title>
+  </head>
+  <link rel="stylesheet" href="style.css">
+  <body>
+    <div class="container" style="text-align:center;">
+      <h1>POMODORO CLOCK</h1>
+      <div class="ctrl-container" >
+        <div id="session">
+          <p>Session Length</p>
+          <div id="ses-btn-wrap">
+            <button class="plus-minus" type="button">-</button>
+            <input id="session-len" type="text" maxlength="2" value="25">
+            <button class="plus-minus" type="button">+</button>
+          </div>
+        </div>
+        <button id="reset" type="button">Reset</button>
+        <div id="break">
+          <p>Break Length</p>
+          <div id="brk-btn-wrap">
+            <button class="plus-minus" type="button">-</button>
+            <input id="break-len" type="text" maxlength="2" value="5" >
+            <button class="plus-minus" type="button">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="timer-container">
+        <svg width="370" height="370">
+          <circle id="analog" r="100" cx='185' cy='185' />
+        </svg>
+        <div id="time">
+          <div>
+            <h2 id="status">SESSION</h2>
+            <h1 id="timer">25:00</h1>
+          </div>
+        </div>
+        <div id="pause-wrap" class="pause show-pause">
+          <h2 id="pause">START?</h2>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" ></script>
+    <script src="app.js" ></script>
+  </body>
+</html>
